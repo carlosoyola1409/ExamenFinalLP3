@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{titulo}}
+{% endblock %}
+
+{% block content %}
+    <!-- Comentarios en HTML-->
+    <!-- Pagina Index-->
+    {% comment 'Datos de la página Index' %}
+   
+    {% endcomment %}
+    <h1 class="title">Examen Final</h1>
+    <p> Usando Templates </p>
+    {% if mensaje %}
+        <p> Mensaje: {{mensaje}} </p>
+    {% else %}
+        <strong>
+        INTEGRANTES:<br>
+        -Oyola Saavedra Carlos Gustavo<br>
+        -Navarro Vicente Jose Wilfredo<br>
+        -Trigo Suarez Ricardo Pablo<br>
+        -Chipana Huaman Cristian Alexis<br>
+        
+        </strong>
+    {% endif %}
+
+    <p>Año 2020 </p>
+{% endblock %}
