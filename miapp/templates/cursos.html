@@ -4,7 +4,25 @@
     {{titulo}}
 {% endblock%}
 {% block content %}
-  <h1>
-  
-  </h1>
+  {% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    
+  {% for curso in  cursos %}
+    <li>
+        {{curso.nombre}}
+    </li>
+    <li>
+      {{curso.creditos}}
+    </li>
+    <li>
+      {{curso.creditos}}
+    </li>
+      <a href="{% url 'eliminar_curso' id=curso.id %}">Eliminar</a>
+    <hr>
+  {% endfor %}
 {% endblock %}

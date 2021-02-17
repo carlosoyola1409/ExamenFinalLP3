@@ -4,7 +4,18 @@
     {{titulo}}
 {% endblock%}
 {% block content %}
-   <h1>
- 
-  </h1>
+{% if messages %}
+        {% for message in messages %}
+            <div class="message">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+  {% for carrera in  carreras %}
+    <li>
+        {{carrera.nombre}}
+    </li>
+    <hr>
+  {% endfor %}
+
 {% endblock %}

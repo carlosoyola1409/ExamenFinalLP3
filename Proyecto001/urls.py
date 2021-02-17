@@ -25,5 +25,6 @@ urlpatterns = [
     path('carreras/',views.carreras, name="carreras"),
     path('create_cursos/',views.crearcursos, name="crearcursos"),
     path('create_carreras/',views.crearcarreras, name="crearcarreras"),
+    path('eliminar_curso/<int:id>',views.eliminar_curso, name="eliminar_curso"),
     
 ]
